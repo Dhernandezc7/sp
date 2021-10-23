@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>proyecto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-black, initial-scale=1.0">
+    </head>
+    <body>
+        <div>hola jeje</div>
+        <p th:text="${a}"></p>
+          <br/>
+        
+          <table border="1"> <!-- declaramos una tabla-->
+            <tr>
+                <th>Nombre</th> <!-- que lleve las siguientes columnas-->
+                <th>Apellido</th>
+                <th>Enero</th>
+                <th>Febrero</th>
+                <th>Marzo</th>
+            </tr>
+             <!-- vamos hacer una iteracion de objeto -->
+            <tr th:each="persona : ${personas}"> <!-- muestra los datos ordenados en la tabla-->
+                <td th:text="${persona.Nombre}"></td>
+                 <td th:text="${persona.Apellido}"></td>
+                 <td th:text="${persona.Enero}"></td>
+                 <td th:text="${persona.Febrero}"></td>
+                  <td th:text="${persona.Marzo}"></td>
+            </tr>
+        </table>
+        
+        </div>
+        
+        <div th:if ="${personas ==null or personas.empty}">
+            no hay cuates.
+        </div>
+    </body>
+</html>
