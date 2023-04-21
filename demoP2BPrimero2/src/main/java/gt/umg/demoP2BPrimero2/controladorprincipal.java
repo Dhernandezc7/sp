@@ -32,8 +32,8 @@ public class controladorprincipal {
        
        
        var persona2=new clspersona ();
-        persona2.setNombre("Ruldin"); //estos datos llevará cada columna de la tabla
-       persona2.setApellido("Rodriguez");
+        persona2.setNombre("Victor"); //estos datos llevará cada columna de la tabla
+       persona2.setApellido("Hernandez");
        persona2.setEnero("700");
        persona2.setFebrero("800");
        persona2.setMarzo("900");
